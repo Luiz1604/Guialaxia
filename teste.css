@@ -1,0 +1,196 @@
+main {
+    display: grid;
+}
+
+
+.gravidade {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    animation: cair 10s ease infinite;
+}
+
+.maca{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+@keyframes cair {
+  0% {
+    top: 50px; 
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 100vh;
+    transform: rotate(150deg);
+  }
+}
+
+.fundo{
+    position:fixed;
+    top:0;
+    left:0;
+    width:200%;
+    height:100vh;
+    display:flex;
+    z-index:-1;
+    animation:fundo 30s linear infinite;
+}
+
+.planeta{
+    position: absolute;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin:auto;
+}
+
+.urano{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(./imagens/urano.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    animation: planetas-girando 5s linear infinite;
+}
+
+.urano{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(./imagens/urano.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    animation: planetas-girando 5s linear infinite;
+}
+
+.marte{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(./imagens/marte.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    animation: planetas-girando 5s linear infinite;
+}
+
+.mercurio{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(./imagens/mercurio.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    animation: planetas-girando 5s linear infinite;
+}
+
+.saturno{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(./imagens/saturno.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    animation: planetas-girando 5s linear infinite;
+}
+
+.netuno{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(./imagens/netuno.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    animation: planetas-girando 5s linear infinite;
+}
+
+.venus{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(./imagens/venus.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    animation: planetas-girando 5s linear infinite;
+}
+
+@keyframes planetas-girando{
+    from{
+        background-position: 0 0;
+    } to {
+        background-position: -355.9px 0;
+    }
+}
+
+.terra{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(./imagens/terra.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    animation: planetas-girando 5s linear infinite;
+}
+
+@keyframes terra-girando{
+    from{
+        background-position: 0 0;
+    } to {
+        background-position: -359.7px 0;
+    }
+}
+
+.jupiter{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(./imagens/jupiter.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    animation: jupiter-girando 5s linear infinite;
+}
+
+@keyframes jupiter-girando {
+    from {
+        background-position: 0 0;
+    } to {
+        background-position: -355.5px 0;
+    }
+}
+
+.camada{
+    background-image: url(./imagens/fundo.png);
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+@keyframes fundo{
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(-50%);
+
+    }
+}
+
