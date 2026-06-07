@@ -59,11 +59,15 @@ nav a{
     font-size: 24px;
 }
 
+nav a:hover{
+    color: red;
+}
+
 h1{
     padding: 40px;
     padding-top: 200px;
     text-align: center;
-    color: white;
+    color: #4da6ff;
     font-weight: bold;
     font-family: 'Orbitron';
     font-size: 40px;
@@ -77,8 +81,9 @@ main{
 
 .introducao{
     color: white;
-    text-align: center;
+    text-align: justify;
     font-size: 18px;
+    font-family: 'Orbitron';
 }
 
 .conteudo{
@@ -89,20 +94,54 @@ main{
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .esquerda{
+    font-size: 20px;
     text-align: justify;
     min-height: 500px;
 }
 
+li{
+    margin-left: 20px;
+}
+
 .centro{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 500px;
 }
 
+.terra{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+
+    background-image: url(imagens/terra.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    animation: terra-girando 8s linear infinite;
+
+    box-shadow:
+        0 0 20px #4da6ff,
+        0 0 50px #4da6ff;
+}
+
+@keyframes terra-girando{
+    from{
+        background-position: 0 0;
+    }
+
+    to{
+        background-position: -539.6px 0;
+    }
+}
+
 .direita{
+    font-size: 20px;
     text-align: justify;
     min-height: 500px;
 }
@@ -119,4 +158,55 @@ main{
     .direita{
         width: 100%;
     }
+}
+
+.conclusao{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Orbitron';
+}
+
+.navegacao{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: 100px 0 50px 0;
+}
+
+.navegacao a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Orbitron';
+    font-size: 20px;
+    padding: 15px 30px;
+    border: 2px solid #4da6ff;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.navegacao a:hover{
+    transform: translateY(-5px);
+
+    background-color: #4da6ff;
+
+    box-shadow:
+        0 0 15px #4da6ff,
+        0 0 30px #4da6ff;
+}
+
+footer{
+    padding: 25px;
+    text-align: center;
+    color: white;
+}
+
+h2{
+    color: #4da6ff;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Orbitron';
+    padding-bottom: 10px;
 }
