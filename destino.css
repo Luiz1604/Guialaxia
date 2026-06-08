@@ -6,6 +6,57 @@
     box-sizing: border-box;
 }
 
+.texto p{
+    font-family: 'Orbitron';
+    font-size: 20px; 
+    color: black;
+    line-height: 1.6; 
+}
+.texto a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-family: 'Orbitron';
+    font-size: 20px;
+    padding: 15px 30px;
+    border: 2px solid #4da6ff;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.4);
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.texto a:hover{
+    transform: translateY(-5px);
+    background-color: #4da6ff;
+
+    box-shadow:
+        0 0 15px #4da6ff,
+        0 0 30px #4da6ff;
+}
+
+.modalidades img{
+    
+    width: 500px;
+    height: 250px;
+    object-fit: cover;
+
+    border-radius: 25px;
+}
+
+.modalidades{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-items: center;
+}
+
+.cards{
+    width: 100%;
+    max-width: 500px;
+}
+
 .fundo{
     position: fixed;
     top: 0;
@@ -66,7 +117,6 @@ nav a:hover{
 h1{
     padding: 40px;
     padding-top: 200px;
-    padding-bottom: 0px;
     text-align: center;
     color: #4da6ff;
     font-weight: bold;
@@ -87,12 +137,6 @@ main{
     font-family: 'Orbitron';
 }
 
-.introducao h2{
-    font-size: 40px;
-    padding: 40px;
-    padding-top: 75px;
-}
-
 .conteudo{
     color: white;
     display: grid;
@@ -111,61 +155,7 @@ main{
 }
 
 li{
-    margin-top: 20px;
     margin-left: 20px;
-}
-
-strong{
-    color: #4da6ff;
-}
-
-.gravidade {
-    position: relative;
-    min-height: 426px;
-}
-
-.maca{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    left: 42%;
-    width: 80px;
-    height: 80px;
-    background-image: url(./imagens/maca.png);
-    background-size: cover;
-    position: absolute;
-    z-index: -1;
-    animation: cair 5s ease-in infinite;
-}
-
-.superficie {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    height: 12px;
-    background: #5e411c;
-    border-radius: 6px;
-    z-index: -1;
-}
-
-@keyframes cair {
-    0% {
-        top: 0%;
-        transform: translateY(0);
-        transform: rotate(0deg);
-    }
-
-    80% {
-        top: calc(100% - 100px);
-        transform: translateY(-100%);
-        transform: rotate(150deg);
-    }
-
-    100% {
-        top: calc(100% - 100px);
-        transform: translateY(-100%);
-        transform: rotate(150deg);
-    }
 }
 
 .centro{
@@ -176,16 +166,35 @@ strong{
 }
 
 .terra{
-    width: 240px;
-    height: 240px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
+
     background-image: url(imagens/terra.png);
     background-size: cover;
     background-repeat: repeat-x;
-    animation: terra-girando 16s linear infinite;
+
+    animation: terra-girando 8s linear infinite;
+
     box-shadow:
         0 0 20px #4da6ff,
         0 0 50px #4da6ff;
+}
+
+.negro{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+
+    background-image: url(imagens/BuracoNegro.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    animation: terra-girando 8s linear infinite;
+
+    box-shadow:
+        0 0 20px #ff9900,
+        0 0 50px #ff6600;
 }
 
 @keyframes terra-girando{
@@ -194,39 +203,8 @@ strong{
     }
 
     to{
-        background-position: -431.7px 0;
+        background-position: -539.6px 0;
     }
-}
-
-.lua{
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    background-image: url(imagens/lua.png);
-    background-size: cover;
-    background-repeat: repeat-x;
-    animation: lua-girando 20s linear infinite;
-    box-shadow:
-        0 0 20px #384959,
-        0 0 50px #384959;
-}
-
-@keyframes lua-girando{
-    from{
-        background-position: 0 0;
-    }
-
-    to{
-        background-position: -302.6px 0;
-    }
-}
-
-#terra{
-    animation: cair 3.00s ease-in infinite;
-}
-
-#lua{
-    animation: cair 12.35s ease-in infinite;
 }
 
 .direita{
