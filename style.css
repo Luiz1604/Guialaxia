@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.fundo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100vh;
+    display: flex;
+    z-index: -1;
+    animation: fundo 30s linear infinite;
+}
+
+.camada{
+    width: 100%;
+    height: 100%;
+    background-image: url(imagens/fundo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@keyframes fundo{
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+#menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background-color: #150f72;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    gap: 50px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Orbitron';
+    font-size: 24px;
+}
+
+nav a:hover{
+    color: red;
+}
+
+h1{
+    padding: 40px;
+    padding-top: 200px;
+    text-align: center;
+    color: #4da6ff;
+    font-weight: bold;
+    font-family: 'Orbitron';
+    font-size: 40px;
+}
+
+main{
+    max-width: 1700px;
+    margin: auto;
+    padding: 20px;
+}
+
+.introducao{
+    color: white;
+    text-align: justify;
+    font-size: 18px;
+    font-family: 'Orbitron';
+}
+
+.conteudo{
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.esquerda{
+    font-size: 20px;
+    text-align: justify;
+    min-height: 500px;
+}
+
+li{
+    margin-left: 20px;
+}
+
+.centro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
+
+.terra{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+
+    background-image: url(imagens/terra.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    animation: terra-girando 8s linear infinite;
+
+    box-shadow:
+        0 0 20px #4da6ff,
+        0 0 50px #4da6ff;
+}
+
+@keyframes terra-girando{
+    from{
+        background-position: 0 0;
+    }
+
+    to{
+        background-position: -539.6px 0;
+    }
+}
+
+.direita{
+    font-size: 20px;
+    text-align: justify;
+    min-height: 500px;
+}
+
+@media (max-width: 1200px){
+
+    .conteudo{
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .esquerda,
+    .centro,
+    .direita{
+        width: 100%;
+    }
+}
+
+.conclusao{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Orbitron';
+}
+
+.navegacao{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: 100px 0 50px 0;
+}
+
+.navegacao a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Orbitron';
+    font-size: 20px;
+    padding: 15px 30px;
+    border: 2px solid #4da6ff;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.navegacao a:hover{
+    transform: translateY(-5px);
+
+    background-color: #4da6ff;
+
+    box-shadow:
+        0 0 15px #4da6ff,
+        0 0 30px #4da6ff;
+}
+
+footer{
+    padding: 25px;
+    text-align: center;
+    color: white;
+}
+
+h2{
+    color: #4da6ff;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Orbitron';
+    padding-bottom: 10px;
+}
