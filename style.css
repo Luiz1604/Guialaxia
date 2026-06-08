@@ -148,7 +148,7 @@ li{
     background-size: cover;
     background-repeat: repeat-x;
 
-    animation: sol-girando 5s linear infinite;
+    animation: sol-girando 24s linear infinite;
 
     box-shadow:
         0 0 20px #daa431,
@@ -161,30 +161,6 @@ li{
     } to {
         background-position: -600.5px 0;
     }
-}
-
-.venus{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-image: url(./imagens/venus.png);
-    background-size: cover;
-    background-repeat: repeat-x;
-    rotate: 27deg;
-
-    animation: planetas-girando 5s linear infinite;
-}
-
-.urano{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-image: url(./imagens/urano.png);
-    background-size: cover;
-    background-repeat: repeat-x;
-    rotate: 97.8deg;
-
-    animation: planetas-girando 5s linear infinite;
 }
 
 @keyframes planetas-girando{
@@ -280,9 +256,36 @@ h2{
     height: 80px;
     background-image: url(./imagens/maca.png);
     background-size: cover;
+    z-index: -1;
     position: absolute;
-    z-index: 1;
-    animation: cair 5s ease-in infinite;
+}
+
+#mercurio{
+    animation: cair 8.18s ease-in infinite;
+}
+
+#venus{
+    animation: cair 5.25s ease-in infinite;
+}
+
+#marte{
+    animation: cair 8.16s ease-in infinite;
+}
+
+#jupiter{
+    animation: cair 3.15s ease-in infinite;
+}
+
+#saturno{
+    animation: cair 4.87s ease-in infinite;
+}
+
+#urano{
+    animation: cair 5.31s ease-in infinite;
+}
+
+#netuno{
+    animation: cair 4.68s ease-in infinite;
 }
 
 .superficie {
@@ -291,6 +294,7 @@ h2{
 
     width: 100%;
     height: 12px;
+    z-index: -1;
 
     background: #5e411c;
     border-radius: 6px;
@@ -315,62 +319,124 @@ h2{
         transform: rotate(150deg);
     }
 }
-
+.jupiter,
 .urano,
 .marte,
 .mercurio,
 .saturno,
 .netuno,
 .venus{
-    width: 200px;
-    height: 200px;
     border-radius: 50%;
     background-size: cover;
     background-repeat: repeat-x;
-    animation: planetas-girando 5s linear infinite;
 }
 
 .urano{
+    width: 280px;
+    height: 280px;
     background-image: url(./imagens/urano.png);
+    animation: urano-girando 13s linear infinite;
 }
 
 .marte{
+    width: 210px;
+    height: 210px;
     background-image: url(./imagens/marte.png);
+    animation: marte-girando 17s linear infinite;
 }
 
 .mercurio{
+    width: 190px;
+    height: 190px;
     background-image: url(./imagens/mercurio.png);
+    animation: mercurio-girando 28s linear infinite;
 }
 
 .saturno{
+    width: 320px;
+    height: 320px;
     background-image: url(./imagens/saturno.png);
+    animation: saturno-girando 9s linear infinite;
 }
 
 .netuno{
+    width: 270px;
+    height: 270px;
     background-image: url(./imagens/netuno.png);
+    animation: netuno-girando 12s linear infinite;
 }
 
 .venus{
+    width: 230px;
+    height: 230px;
     background-image: url(./imagens/venus.png);
+    animation: venus-girando 36s linear infinite;
 }
 
 .jupiter{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 340px;
+    height: 340px;
     background-image: url(./imagens/jupiter.png);
-    background-size: cover;
-    background-repeat: repeat-x;
-    animation: jupiter-girando 5s linear infinite;
+    animation: jupiter-girando 8s linear infinite;
 }
 
-@keyframes planetas-girando{
+@keyframes mercurio-girando{
     from{
         background-position: 0 0;
     }
 
     to{
-        background-position: -355.9px 0;
+        background-position: -338px 0;
+    }
+}
+
+@keyframes venus-girando{
+    from{
+        background-position: 0 0;
+    }
+
+    to{
+        background-position: -409px 0;
+    }
+}
+
+@keyframes marte-girando{
+    from{
+        background-position: 0 0;
+    }
+
+    to{
+        background-position: -373.8px 0;
+    }
+}
+
+@keyframes saturno-girando{
+    from{
+        background-position: 0 0;
+    }
+
+    to{
+        background-position: -569px 0;
+    }
+}
+
+@keyframes urano-girando{
+    from{
+        background-position: 0 0;
+    }
+
+    to{
+        background-position: -498px 0;
+    }
+}
+
+@keyframes netuno-girando{
+    from{
+        background-position: 0 0;
+    }
+
+    to{
+        background-position: -480px 0;
     }
 }
 
@@ -380,6 +446,6 @@ h2{
     }
 
     to{
-        background-position: -355.5px 0;
+        background-position: -604px 0;
     }
 }
