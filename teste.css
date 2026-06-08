@@ -54,16 +54,7 @@ main {
     margin:auto;
 }
 
-.urano{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-image: url(./imagens/urano.png);
-    background-size: cover;
-    background-repeat: repeat-x;
 
-    animation: planetas-girando 5s linear infinite;
-}
 
 .urano{
     width: 200px;
@@ -127,6 +118,7 @@ main {
     background-image: url(./imagens/venus.png);
     background-size: cover;
     background-repeat: repeat-x;
+    
 
     animation: planetas-girando 5s linear infinite;
 }
