@@ -130,38 +130,6 @@ li{
         0 0 50px #4da6ff;
 }
 
-.neutrons{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-
-    background-image: url(imagens/EstrelaNeutrons.png);
-    background-size: cover;
-    background-repeat: repeat-x;
-
-    animation: terra-girando 8s linear infinite;
-
-    box-shadow:
-        0 0 20px #071de0,
-        0 0 50px #058ed8;
-}
-
-.negro{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-
-    background-image: url(imagens/BuracoNegro.jpeg);
-    background-size: cover;
-    background-repeat: repeat-x;
-
-    animation: terra-girando 8s linear infinite;
-
-    box-shadow:
-        0 0 20px #ff6f00,
-        0 0 50px #ffd54d;
-}
-
 @keyframes terra-girando{
     from{
         background-position: 0 0;

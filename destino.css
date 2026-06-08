@@ -6,6 +6,57 @@
     box-sizing: border-box;
 }
 
+.texto p{
+    font-family: 'Orbitron';
+    font-size: 20px; 
+    color: black;
+    line-height: 1.6; 
+}
+.texto a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-family: 'Orbitron';
+    font-size: 20px;
+    padding: 15px 30px;
+    border: 2px solid #4da6ff;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.4);
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.texto a:hover{
+    transform: translateY(-5px);
+    background-color: #4da6ff;
+
+    box-shadow:
+        0 0 15px #4da6ff,
+        0 0 30px #4da6ff;
+}
+
+.modalidades img{
+    
+    width: 500px;
+    height: 250px;
+    object-fit: cover;
+
+    border-radius: 25px;
+}
+
+.modalidades{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-items: center;
+}
+
+.cards{
+    width: 100%;
+    max-width: 500px;
+}
+
 .fundo{
     position: fixed;
     top: 0;
@@ -15,6 +66,10 @@
     display: flex;
     z-index: -1;
     animation: fundo 30s linear infinite;
+}
+
+.titulo{
+    font-size: 80px;
 }
 
 .camada{
@@ -130,36 +185,20 @@ li{
         0 0 50px #4da6ff;
 }
 
-.neutrons{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-
-    background-image: url(imagens/EstrelaNeutrons.png);
-    background-size: cover;
-    background-repeat: repeat-x;
-
-    animation: terra-girando 8s linear infinite;
-
-    box-shadow:
-        0 0 20px #071de0,
-        0 0 50px #058ed8;
-}
-
 .negro{
     width: 300px;
     height: 300px;
     border-radius: 50%;
 
-    background-image: url(imagens/BuracoNegro.jpeg);
+    background-image: url(imagens/BuracoNegro.png);
     background-size: cover;
     background-repeat: repeat-x;
 
     animation: terra-girando 8s linear infinite;
 
     box-shadow:
-        0 0 20px #ff6f00,
-        0 0 50px #ffd54d;
+        0 0 20px #ff9900,
+        0 0 50px #ff6600;
 }
 
 @keyframes terra-girando{
