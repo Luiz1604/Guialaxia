@@ -48,7 +48,7 @@
 
 nav{
     display: flex;
-    gap: 50px;
+    gap: 60px;
 }
 
 nav a{
@@ -56,7 +56,7 @@ nav a{
     color: white;
     font-weight: bold;
     font-family: 'Orbitron';
-    font-size: 24px;
+    font-size: 30px;
 }
 
 nav a:hover{
@@ -66,6 +66,7 @@ nav a:hover{
 h1{
     padding: 40px;
     padding-top: 200px;
+    padding-bottom: 0px;
     text-align: center;
     color: #4da6ff;
     font-weight: bold;
@@ -86,6 +87,12 @@ main{
     font-family: 'Orbitron';
 }
 
+.introducao h2{
+    font-size: 40px;
+    padding: 40px;
+    padding-top: 75px;
+}
+
 .conteudo{
     color: white;
     display: grid;
@@ -104,7 +111,61 @@ main{
 }
 
 li{
+    margin-top: 20px;
     margin-left: 20px;
+}
+
+strong{
+    color: #4da6ff;
+}
+
+.gravidade {
+    position: relative;
+    min-height: 426px;
+}
+
+.maca{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    left: 42%;
+    width: 80px;
+    height: 80px;
+    background-image: url(./imagens/maca.png);
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    animation: cair 5s ease-in infinite;
+}
+
+.superficie {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 12px;
+    background: #5e411c;
+    border-radius: 6px;
+    z-index: -1;
+}
+
+@keyframes cair {
+    0% {
+        top: 0%;
+        transform: translateY(0);
+        transform: rotate(0deg);
+    }
+
+    80% {
+        top: calc(100% - 100px);
+        transform: translateY(-100%);
+        transform: rotate(150deg);
+    }
+
+    100% {
+        top: calc(100% - 100px);
+        transform: translateY(-100%);
+        transform: rotate(150deg);
+    }
 }
 
 .centro{
@@ -115,51 +176,16 @@ li{
 }
 
 .terra{
-    width: 300px;
-    height: 300px;
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
-
     background-image: url(imagens/terra.png);
     background-size: cover;
     background-repeat: repeat-x;
-
-    animation: terra-girando 8s linear infinite;
-
+    animation: terra-girando 16s linear infinite;
     box-shadow:
         0 0 20px #4da6ff,
         0 0 50px #4da6ff;
-}
-
-.neutrons{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-
-    background-image: url(imagens/EstrelaNeutrons.png);
-    background-size: cover;
-    background-repeat: repeat-x;
-
-    animation: terra-girando 8s linear infinite;
-
-    box-shadow:
-        0 0 20px #071de0,
-        0 0 50px #058ed8;
-}
-
-.negro{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-
-    background-image: url(imagens/BuracoNegro.jpeg);
-    background-size: cover;
-    background-repeat: repeat-x;
-
-    animation: terra-girando 8s linear infinite;
-
-    box-shadow:
-        0 0 20px #ff6f00,
-        0 0 50px #ffd54d;
 }
 
 @keyframes terra-girando{
@@ -168,8 +194,39 @@ li{
     }
 
     to{
-        background-position: -539.6px 0;
+        background-position: -431.7px 0;
     }
+}
+
+.lua{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-image: url(imagens/lua.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+    animation: lua-girando 20s linear infinite;
+    box-shadow:
+        0 0 20px #384959,
+        0 0 50px #384959;
+}
+
+@keyframes lua-girando{
+    from{
+        background-position: 0 0;
+    }
+
+    to{
+        background-position: -302.6px 0;
+    }
+}
+
+#terra{
+    animation: cair 3.00s ease-in infinite;
+}
+
+#lua{
+    animation: cair 12.35s ease-in infinite;
 }
 
 .direita{

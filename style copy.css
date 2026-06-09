@@ -140,6 +140,61 @@ li{
     }
 }
 
+.sol{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-image: url(./imagens/sol.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    animation: sol-girando 5s linear infinite;
+
+    box-shadow:
+        0 0 20px #daa431,
+        0 0 50px #daa431;
+}
+
+@keyframes sol-girando{
+    from{
+        background-position: 0 0;
+    } to {
+        background-position: -600.5px 0;
+    }
+}
+
+.venus{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(./imagens/venus.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+    rotate: 27deg;
+
+    animation: planetas-girando 5s linear infinite;
+}
+
+.urano{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(./imagens/urano.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+    rotate: 97.8deg;
+
+    animation: planetas-girando 5s linear infinite;
+}
+
+@keyframes planetas-girando{
+    from{
+        background-position: 0 0;
+    } to {
+        background-position: -355.9px 0;
+    }
+}
+
 .direita{
     font-size: 20px;
     text-align: justify;
